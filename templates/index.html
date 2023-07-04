@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Counter Clicks</title>
+</head>
+<body>
+    <wrapper class="center">
+
+        <h1>Counter Clicks</h1>
+        
+        <p>{{session['click']}} times</p>
+
+        <div class="changes">
+            <button onclick="window.location.href='/'">Click</button>
+            <button onclick="window.location.href='/destroy_session'">Reset</button>
+            <button onclick="window.location.href='/add_two'">Add Two</button>
+        </div>
+        
+    </wrapper>
+</body>
+</html>
